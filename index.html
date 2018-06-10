@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://apocalypsechess.online/ -->
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <title>Play Apocalypse Chess</title>
+    <meta name="description" content="Play the apocalypse chess variant on ApocalypseChess.online! Play a quick match against a random player online or invite a friend.">
+    <meta name="author" content="vez">
+    <meta name="theme-color" content="#CF4818">
+    <link rel="shortcut icon" href="http://apocalypsechess.online/assets/apoc_horse_icon.png">
+
+    <link rel="stylesheet" href="assets/style.css">
+
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+ <style>@media print {#ghostery-purple-box {display:none !important}}</style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="/">
+            <div class="main-image"></div>
+            <div class="title">Apocalypse</div>
+            <div class="compliment-title">Play</div>
+        </a>
+
+        <a href="/rules"><button class="pi-button">Rules ♞</button></a>
+        <button class="pi-button" onclick="modal_action(false);">Private Game</button>
+        <button class="pi-button" onclick="server.joinAI();">AI Game</button>
+        <button class="pi-button with-shadow" onclick="server.joinRandom();">Find Game</button>
+
+    </div>
+
+    <div class="gameplay">
+        <canvas id="canvas" width="325" height="325">
+            Your browser doesn't support apocalypse chess :(
+        </canvas>
+        <div id="messages">
+            <p id="waiting_message">Move sent, waiting for opponent <b class="dot1">.</b><b class="dot2">.</b><b class="dot3">.</b></p>
+        </div>
+    </div>
+
+    <div class="modal-back" id="modal-back" onclick="modal_action(true);"></div>
+    <div class="modal-pop-up" id="modal" style="display: none; opacity: 0;"><b>Creating private match</b><input placeholder="game name" class="vezinput" id="modal-input"><button class="pi-button with-shadow" id="modal-button" onclick="modal_action(true);">Create Game</button></div>
+
+    <div class="footer">
+        Website and logo copyright 2017 Elliot Evans. The Apocalypse game and it's rules are not owned by me. v1.1.0<br>    <a href="http://www.vezwork.me/">Elliot Evans</a> | <a href="https://en.wikipedia.org/wiki/Apocalypse_(chess_variant)">Original Rules</a> | <a href="https://github.com/vezwork/phasocketonline">Source code</a>
+    </div>
+
+<link rel="stylesheet" href="assets/vez-ui.css">
+<script defer src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+<script defer="" src="assets/js.js"></script>
+
+
+</body></html>

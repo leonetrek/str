@@ -1,0 +1,242 @@
+body {
+    background-color: #E2E2E2;
+    margin: 0px;
+}
+
+.header .title {
+    color: #555555;
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    display: inline-block;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+.header .compliment-title {
+    position: relative;
+    display: inline-block;
+    color: #999;
+    font-size: 15px;
+    top: -23px;
+    left: -161px;
+    font-family: sans-serif;
+}
+
+.header .main-image {
+    background:url('apoc_horse_small.png');
+    height:85px;
+    width:55px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: -26px;
+}
+
+.header {
+    width: 800px;
+    margin: 14px auto;
+}
+
+.header button {
+    float: right;
+    margin-top: 29px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.header .pi-button:hover {
+}
+
+.header .pi-button:focus::before {
+    left: -20px;
+}
+
+.gameplay, .rules-main {
+    box-shadow: 0 1px 3px 0 #707070, 0 1px 1px 0 #adadad;
+    background-color: #F0F0F0;
+    height: 325px;
+    width: 625px;
+    margin: 40px auto;
+    border-radius: 3px;
+    overflow: hidden;
+    border-style: solid;
+    border: 0px;
+    border-bottom: 5px;
+}
+
+.rules-main {
+    padding: 20px;
+    font-family: sans-serif;
+    line-height: 1.5;
+    height: auto;
+    color: #333
+}
+
+.rules-main h1 {
+    font-family: serif;
+    margin-top: 0px;
+    color: #555555;
+}
+
+.gameplay #canvas {
+    cursor: pointer;
+    height: 325px;
+    width: 325px;
+    background-image: url('apoc_back.png');
+    background-size: cover;
+    float: left;
+}
+
+.gameplay #messages {
+    height: 325px;
+    width: 300px;
+    float: left;
+    display: inline-block;
+    overflow-y: scroll;
+}
+
+.gameplay #messages p {
+    padding: 20px;
+    font-size: 14px;
+    background-color: #E5E5E5;
+    font-family: sans-serif;
+    color: #555;
+    margin:0px;
+}
+
+.gameplay #messages img {
+    height: 33px;
+    width: 33px;
+    vertical-align: middle;
+    background: #B5AC8D;
+    padding: 1px;
+    border-radius: 10px;
+}
+
+.gameplay #messages p:nth-child(even) {
+    background-color: #EEE;
+}
+
+.gameplay #messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+.gameplay #messages::-webkit-scrollbar-track {
+    background: #EEE;
+}
+
+.gameplay #messages::-webkit-scrollbar-thumb {
+    background: #BBB;
+}
+
+.footer {
+    width: 300px;
+    text-align: center;
+    font-family: sans-serif;
+    margin: -20px auto;
+    color: #888;
+    font-size: 11px;
+}
+
+.modal-pop-up {
+    position: fixed;
+    color: #333;
+    width: 175px;
+    font-family: sans-serif;
+    padding: 25px;
+    top: 20%;
+    left: 50%;
+    margin-top: -65px;
+    margin-left: -132px;
+    background-color: #EEE;
+    border-radius: 2px;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1), 0 15px 15px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    opacity: 0;
+    display: none;
+    animation-name: modal-in;
+    animation-timing-function: ease-out;
+    animation-duration: 0.5s;
+}
+
+@keyframes modal-in {
+    0% {opacity: 0; transform: scale(0.8); top: 20%;}
+    100% {opacity: 1; transform: scale(1);}
+}
+
+@keyframes fade-in {
+    0% {opacity: 0; }
+    100% {opacity: 1; }
+}
+
+.modal-pop-up .pi-button {
+    display: block;
+    margin: 20px auto 0 auto;
+}
+
+.modal-pop-up input {
+    display: block;
+    margin: 20px auto;
+}
+
+.modal-pop-up .pi-button:focus::before {
+    left: -14px;
+    background-color: #c99521;
+}
+
+.modal-back {
+    position: fixed;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: none;
+    animation-name: fade-in;
+    animation-timing-function: ease-out;
+    animation-duration: 0.75s;
+}
+
+a
+{
+    color: #888;
+}
+a:hover
+{
+    color: #888;
+}
+a:visited
+{
+    color: #888;
+}
+
+#waiting_message {
+    display: none;
+}
+
+.dot1 {
+    animation-delay: -1s;
+}
+
+.dot2 {
+    animation-delay: -0.5s;
+}
+
+.dot1, .dot2, .dot3 {
+    font-size: 20px;
+    line-height: 0px;
+    animation-name: bob;
+    animation-timing-function: ease-in;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bob {
+    0% {}
+    50% {opacity: 0;}
+    100% {}
+}
